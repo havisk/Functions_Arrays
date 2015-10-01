@@ -71,6 +71,7 @@ function isVowel(value)
   
 };
 
+
 // ---------------------
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
@@ -86,7 +87,8 @@ function rovarspraket(phrase)
 	    value === "e" ||
 	    value === "i" ||
 	    value === "o" ||
-	    value === "u")
+	    value === "u" ||
+	    value ==="")
   	{
   		x = (x + (value));
 
@@ -102,6 +104,9 @@ function rovarspraket(phrase)
 
  	
 };
+
+
+
 
 
 // ---------------------
@@ -131,15 +136,21 @@ function findLongestWord(words)
 function filterLongWords(words, i)
 {
 
-words =  ["castle", "longway", "numark", "a", "bo"];
-i=300;
 
-words.filter(function(word){
 
-	return word.length > i.length;
+
+var x = words.filter(function(word){
+
+	return word.length > i;
 });   
-
+return x;
 }
+
+var words = ["castle", "longway", "numark", "a", "bo"];
+filterLongWords(words, 4);
+
+
+
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
