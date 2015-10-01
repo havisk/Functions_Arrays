@@ -82,7 +82,7 @@ function rovarspraket(phrase)
 
   s.forEach(function(value)
   {
-  	(value === "a" ||
+  	if (value === "a" ||
 	    value === "e" ||
 	    value === "i" ||
 	    value === "o" ||
